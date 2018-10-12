@@ -1,5 +1,4 @@
 <html>
-	
 	<head>
 	<title>HoWZATT!!-Home Of Cricket</title>
 <meta charset="UTF-8">
