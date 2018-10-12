@@ -25,15 +25,14 @@ Statistics
 
 <?php
 include 'navbar.php';
-include 'connect.php';
-//$conn = mysqli_connect("localhost", "root", "", "cricket_website");
-    //if ($conn->connect_error) {
-    //die("Connection failed: " . $conn->connect_error);
-    //}
+$conn = mysqli_connect("localhost", "root", "", "cricket_website");
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
 
  
-    $sql = "SELECT * FROM players";
-    $res_players = $conn -> query($sql);
+$sql = "SELECT * FROM players";
+$res_players = $conn -> query($sql);
 
 
 //$sql_player="SELECT * FROM `players`"

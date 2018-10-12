@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Suicide Prevention Admin</title>
+<title>Admin</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -62,6 +62,13 @@ margin-right: 20px;
 <?php
 session_start();
 unset($_SESSION['user']);
+include 'navbar.php';
+$conn = mysqli_connect("localhost", "root", "", "cricket_website");
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT * FROM players";
+$res_players = $conn -> query($sql);
 ?>
 </head>
 <body>
