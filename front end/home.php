@@ -25,7 +25,7 @@ body{
 #main-body{
 	background-color: white;	
     //position: relative;
-    height: 200%;
+    height: 206%;
     width: 75%;
 	float: left;
 	padding: 0;
@@ -92,7 +92,9 @@ margin: 0;
 .first-row{
 	width: 80%;
 	height: 250px;
-    margin: auto;
+    margin-left: auto;
+	margin-right: auto;
+	//margin-bottom: 140px;
 }
 
 .wrap> img{
@@ -104,8 +106,11 @@ margin: 0;
 .second-row{
 	width: 80%;
 	height: 300px;
-	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 	border: 1px solid black;
+	overflow: hidden;
+    margin-top: 150px;
 }
 
 .second-row> img{
@@ -121,11 +126,17 @@ margin: 0;
 	float: left;
 }
 
+#footer{
+	width: 100%;
+	background-color: black;
+	height: 15%;
+	margin-top: 10%;
+}
 
 @media only screen and (max-width: 767px){
 	.second-row{
 	    height: 200px;
-        margin-top: 20px;		
+        margin-top: 360px;		
 	}
 	.second-row> img{
 		height: 100%;
@@ -188,8 +199,16 @@ Team India doctor Vijay Mane to join the team in England for the ongoing
 
 </div>
 
-<div class="second-row">
+<div class="row second-row">
 <img src="../images/teams/mostruns.jpg">
+</div>
+
+<div id="footer">
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4" style="color: white; font-family: serif; text-align: center;  margin-top: 2em; font-size: 2em;">About Us | Contact Us</div>
+<div class="col-md-4"></div>
+</div>
 </div>
 
 </div>

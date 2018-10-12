@@ -35,6 +35,19 @@ margin-right: 20px;
 margin-top: 20px;
 }
 
+.btnsection> button{
+	border-radius: 6px;
+	background: none;
+    font-weight: bold;
+    border: 1px solid #0097c1;
+    font-size: 3em;
+    height:	2em;
+}
+.btnsection{
+	text-align: center;
+	margin-top: 3em;
+}
+
 @media only screen and (max-width: 767px){
 	#logoutbtn{
 		width: 100%;	
@@ -58,7 +71,7 @@ else{
 <body>
 <div class="container" id="section1">
 <div style="width: 100%; text-align: right;">
-<h2 style="padding: 0; margin-top: 10px; float: left;">Volunteer Dashboard</h2>
+<h2 style="padding: 0; margin-top: 10px; float: left;">Admin Dashboard</h2>
 <form method="POST" action="vollogout.php">
 <input type="submit" name="lgt" id="logoutbtn" value="Logout">
 </form>
@@ -70,9 +83,9 @@ else{
 <div class="col-md-4"><div class="btnsection"><button>Add Match</button></div></div>
 </div>
 <div class="row">
-<div class="col-md-4"></div>
-<div class="col-md-4"></div>
-<div class="col-md-4"></div>
+<div class="col-md-6"><div class="btnsection"><button>Add Batsman</button></div></div>
+<div class="col-md-6"><div class="btnsection"><button>Add Bowler</button></div></div>
+<!--<div class="col-md-4"><div class="btnsection"><button>Add Player</button></div></div>-->
 </div>
 
 

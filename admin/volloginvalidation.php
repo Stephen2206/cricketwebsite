@@ -22,7 +22,7 @@ $stmt->store_result();
 if($stmt->num_rows==1){
 	session_start();
 $_SESSION['user']=$usr;
-header("Location: ./volmain.php");
+header("Location: ./admindash.php");
 //$_SESSION['user']=$usr;
 //exit();
 }
