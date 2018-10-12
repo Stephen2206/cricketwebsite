@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <link rel="shortcut icon" type="image/png" href="../images/logo.png">
 <link rel="stylesheet" type="text/css" href="../css/navbar.css">
 <!--fonts below-->
@@ -51,7 +52,7 @@ body{
     //position:sticky;
 }
 #cover-page{
-height: 25%;
+height: 300px;
 width: 100%;
 padding: 0;
 margin: 0;
@@ -94,10 +95,21 @@ margin: 0;
     margin: auto;
 }
 
+.wrap> img{
+	height: 100%;
+    width: 100%;
+    border-right: 1px solid black;	
+}
+
 .second-row{
 	width: 80%;
-	height: 400px;
+	height: 300px;
 	margin: auto;
+}
+
+.second-row> img{
+	width: 100%;
+	height: 100%;
 }
 
 .wrap{
@@ -125,7 +137,13 @@ margin: 0;
     float: none;	
 }
 
-
+.second-row{
+ height: 100px;
+ 
+}
+.second-row> img{
+ height: 50%;
+}
 
 }
 
@@ -144,10 +162,10 @@ H<br>O<br>Z<br>A<br>T<br>T
 <?php
 include './navbar.php';
 ?>
-<div class="row first-row">
+<div class="first-row">
 <div class="news">
 <div class="wrap">
-<img src="../images/news/rahane.jpg" width="100%" height="100%" style="border-right: 1px solid black;">
+<img src="../images/news/rahane.jpg" width="100%" height="100%">
 </div>
 <h4>Ajinkya Rahane will join Team Inida</h4>
 <p>Team India Vice Captain Akinkya Rahane was given the go ahead by
@@ -161,8 +179,8 @@ Team India doctor Vijay Mane to join the team in England for the ongoing
 
 </div>
 
-<div class="row second-row" style="margin-top: 100px; border: 1px solid black;">
-<img src="../images/teams/mostruns.jpg" width="100%" height="100%">
+<div class="second-row" style="margin-top: 100px; border: 1px solid black;">
+<img src="../images/teams/mostruns.jpg">
 </div>
 
 </div>
