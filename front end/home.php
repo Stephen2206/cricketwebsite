@@ -157,6 +157,24 @@ Team India doctor Vijay Mane to join the team in England for the ongoing
 
 <div class="live-score">
 <h4 style=" font-family: serif; text-align: center; font-weight: bold;">Live Score</h4>
+<?php
+$conn = mysqli_connect("localhost", "root", "", "cricket_website");
+	if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+	}
+	$sql = "SELECT Team1,Team2 FROM matches";
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "<font color=blue size='8pt'>  " . $row["Team1"]. " x " . $row["Team2"]. " <br></font>";
+    }
+} else {
+    echo "0 results";
+}
+
+?>
 </div>
 
 </div>

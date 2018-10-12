@@ -1,7 +1,6 @@
 <html>
-	
-	<head>
-	<title>HoWZATT!!-Home Of Cricket</title>
+<head>
+<title>HoWZATT!!-Home Of Cricket</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,8 +10,9 @@
 <link rel="stylesheet" type="text/css" href="../css/navbar.css">
 <!--fonts below-->
 <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-	<style>
-	body{
+
+<style>
+body{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -100,10 +100,15 @@ th, td {
     padding: 15px;
     text-align: center;
 }
-	</style>
-	</head>
-	<body>
-	<div id="left-banner">
+
+
+
+}
+
+</style>
+</head>
+<body>
+<div id="left-banner">
 H<br>O<br>Z<br>A<br>T<br>T
 </div>
 
@@ -115,57 +120,19 @@ H<br>O<br>Z<br>A<br>T<br>T
 <?php
 include './navbar.php';
 ?>
-	<?php
-	
-	$conn = mysqli_connect("localhost", "root", "", "cricket_website");
-	if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
-	}
-	$sql = "SELECT * FROM teams";
-	$res_teams = $conn -> query($sql);
-	?>
-	<table style="width:100%">
-	  <tr>
-		<th>Team ID</th>
-		<th>Country</th> 
-		<th>Matches Played</th>
-		<th>Matches Won</th>
-		<th>Matches Lost(Derived)</th>
-	 </tr>
-	 <?php
-	while($row_teams = mysqli_fetch_array($res_teams))
-	{
-		echo '<tr>';
-			echo "<td><center>";
-				echo $row_teams['team_id'];
-			echo "</center></td>";
-			echo "<td><center>";
-			   
-			   echo $row_teams['country'];
-	 
-			echo "</td><center>";
-			echo "<td><center>";
-			   
-					echo $row_teams['matches_played'];
-				
-			echo "</td><center>";
-			echo "<td><center>";
-				
-				echo $row_teams['won'];
-			
-			echo "</td><center>";
-			echo "<td><center>";
-				
-				echo $row_teams['matches_played']-$row_teams['won'];
-			
-			echo "</td><center>";
-		echo '</tr>';
-	}
-?>
 
-	</body>  
-	  
+<table>
+	<th>Rank</th>
+	<th>Country</th>
+	<th>No of wins</th>
+	</table>
 
 
+</div>
 
+<div id="right-banner">
+H<br>O<br>M<br>E<br><br>O<br>F<br><br>C<br>R<br>I<br>C<br>K<br>E<br>T
+</div>
+
+</body>
 </html>
