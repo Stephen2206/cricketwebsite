@@ -1,0 +1,46 @@
+.navbar{
+	background: black; 
+	margin-bottom:0;
+   	z-index: 0;
+	border-radius: 0;
+	font-family: Serif;
+	//padding: 10px;
+}
+
+.navbar-right> li:hover{
+	border-bottom: 2px solid red;
+    transition-duration: 200ms;
+    transition-timing-function: easy-in-out;
+    padding:0;
+}
+
+.navbar-right li>a{
+	
+	color: white;
+	font-weight: bold;
+	font-size: 1.4em;
+    
+} 
+
+.navbar-right li>a:hover{
+	color: red;
+	background: none;
+	border: 0;
+	transition-duration: 200ms;
+    transition-timing-function: linear;
+	
+}
+
+.navbar-right li>a:hover::after{
+	color: red;
+	background: none;
+	border: 0;
+	transition-duration: 200ms;
+    transition-timing-function: linear;
+	border-bottom: 5px solid red;
+}
+
+.navbar-right li>a:visited{
+	border: 0;
+	background: none;
+}
