@@ -34,6 +34,14 @@ background: none;
 margin-right: 20px;
 margin-top: 20px;
 }
+
+@media only screen and (max-width: 767px){
+	#logoutbtn{
+		width: 100%;	
+	}
+	 
+		
+}
 </style>
 <?php
 session_start();
@@ -55,6 +63,19 @@ else{
 <input type="submit" name="lgt" id="logoutbtn" value="Logout">
 </form>
 </div>
+
+<div class="row">
+<div class="col-md-4"><div class="btnsection"><button>Add Player</button></div></div>
+<div class="col-md-4"><div class="btnsection"><button>Add Team</button></div></div>
+<div class="col-md-4"><div class="btnsection"><button>Add Match</button></div></div>
+</div>
+<div class="row">
+<div class="col-md-4"></div>
+<div class="col-md-4"></div>
+<div class="col-md-4"></div>
+</div>
+
+
 </div>
 </body>
 </html>

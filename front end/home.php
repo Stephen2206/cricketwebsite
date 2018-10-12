@@ -105,12 +105,15 @@ margin: 0;
 	width: 80%;
 	height: 300px;
 	margin: auto;
+	border: 1px solid black;
 }
 
 .second-row> img{
 	width: 100%;
 	height: 100%;
-}
+    margin: 0;
+	padding:0;
+	}
 
 .wrap{
 	width: 60%;
@@ -118,35 +121,41 @@ margin: 0;
 	float: left;
 }
 
-@media only screen and(max-width: 500px){
-	
+
+@media only screen and (max-width: 767px){
+	.second-row{
+	    height: 200px;
+        margin-top: 20px;		
+	}
+	.second-row> img{
+		height: 100%;
+		width: 100%;
+	}
+	#main-body{
+		width: 100%;
+	}
+	#right-banner{
+		display: none;
+	}
+	#left-banner{
+		display: none;
+	}
+	#cover-page{
+		height: 15%;
+	}
 	.news{
-	height: 100%;
-	width: 100%;
-	margin-top: 20px;
-	//box-shadow: 3px 3px 5px black, -3px 3px 5px black;
-    float: none;
-    }
-
-.live-score{
-	float: right;
-	width: 100%;
-	height: 100%;
-    //box-shadow: 3px 3px 5px black, -3px 3px 5px black;
-    margin-top: 20px;
-    float: none;	
+		width: 100%;
+	}
+	.live-score{
+		width: 100%;
+	}
+	.first-row{
+		height: 200px;
+	}
 }
-
-.second-row{
- height: 100px;
- 
+   
+		
 }
-.second-row> img{
- height: 50%;
-}
-
-}
-
 </style>
 </head>
 <body>
@@ -179,7 +188,7 @@ Team India doctor Vijay Mane to join the team in England for the ongoing
 
 </div>
 
-<div class="second-row" style="margin-top: 100px; border: 1px solid black;">
+<div class="second-row">
 <img src="../images/teams/mostruns.jpg">
 </div>
 
