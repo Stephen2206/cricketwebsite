@@ -1,5 +1,14 @@
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" type="image/png" href="../images/logo.png">
+<link rel="stylesheet" type="text/css" href="../css/navbar.css">
+<!--fonts below-->
+<link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
 
 <style>
 table, th,td  {
@@ -25,7 +34,7 @@ Statistics
 
 <?php
 include 'navbar.php';
-$conn = mysqli_connect("localhost", "root", "", "cricket_website");
+$conn = mysqli_connect("localhost:3308", "root", "", "cricket_website");
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }

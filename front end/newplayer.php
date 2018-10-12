@@ -19,13 +19,13 @@ body{
 font-family: Courier, Arial, Serif;
 color: #0097c1;
 background-color: white;
-height: 50%;
-margin-top: 13.5%;		
+height: 70%;
+margin-top: 11.5%;		
 border-radius: 10px;
 width: 50%;
 }
 
-input[type=text], input[type=password]{
+input[type=text], input[type=password], input[type=date],input[type=int]{
 border: none;
 outline: none;
 color: #0097c1;
@@ -64,65 +64,57 @@ margin-right: 20px;
 <body>
 <?php
 
-session_start();
-//unset($_SESSION['user']);
+
 $conn = mysqli_connect("localhost:3308", "root", "", "cricket_website");
 if($conn->connect_error){
 die("Connection failed" . $conn->connect_error);
 }
-if(isset($_POST['user']))
-{$un = $_POST['user'];
-$pw = $_POST['password'];
-
-//$sql="select*from logindetails;";
-$stmt=$conn->prepare("select username,password from admin where username=? and password=? LIMIT 1;");
-$stmt->bind_param("ss", $un, $pw); //each s stands for one bind variable it can be any other character other than s also
-$stmt->execute();
-$stmt->bind_result($un, $pw);
-$stmt->store_result();
-
-if($stmt->num_rows==1){
-	//session_start();
-$_SESSION['user']=$un;
-header("Location: ./admindash.php");
-//$_SESSION['user']=$un;
-//exit();
-}
-
-else{
-$message = "Invalid username or password";
-echo "<script type='text/javascript'>alert('$message');</script>";
-}
-}
-//if($result->num_rows>0){
-//while($row=$result->fetch_assoc()){
-//echo "<br>".$row["sr_no"]." ".$row["user"]." ".$row["name"];
-
-//else{
-//echo "0 results";
-//}
 
 ?>
 <div class="container" id="section1">
 <form method="post" >
-<center><h2 style="margin-top:20px;">Volunteer Login</h2></center>
+<center><h2 style="margin-top:20px;">Add New Player</h2></center>
 
 <div class="row" style="margin-top: 20px;">
-<div class="col-md-6 text-center" style="font-size: 1.5em;;">Admin name</div>
+<div class="col-md-6 text-center" style="font-size: 1.5em;;">Player_ID</div>
 <div class="col-md-6">
-<input type="text" name="user" style="border-bottom: 3px solid #0097c1;">
+<input type="text" name="pid" style="border-bottom: 3px solid #0097c1;" required>
 </div>
 </div>
 <div class="row" style="margin-top: 20px;">
-<div class="col-md-6 text-center" style="font-size: 1.5em;">Admin Password:</div>
+<div class="col-md-6 text-center" style="font-size: 1.5em;">Team_ID:</div>
 <div class="col-md-6">
-<input type="password" name="password" style="border-bottom: 3px solid #0097c1;">
+<input type="text" name="tid" style="border-bottom: 3px solid #0097c1;" required>
+</div>
+</div>
+<div class="row" style="margin-top: 20px;">
+<div class="col-md-6 text-center" style="font-size: 1.5em;">Runs:</div>
+<div class="col-md-6">
+<input type="text" name="runs" style="border-bottom: 3px solid #0097c1;" required>
+</div>
+</div>
+<div class="row" style="margin-top: 20px;">
+<div class="col-md-6 text-center" style="font-size: 1.5em;">Debut:</div>
+<div class="col-md-6">
+<input type="date" name="debut" style="border-bottom: 3px solid #0097c1;" required>
+</div>
+</div>
+<div class="row" style="margin-top: 20px;">
+<div class="col-md-6 text-center" style="font-size: 1.5em;">Wickets:</div>
+<div class="col-md-6">
+<input type="int" name="wickets" style="border-bottom: 3px solid #0097c1;" required>
+</div>
+</div>
+<div class="row" style="margin-top: 20px;">
+<div class="col-md-6 text-center" style="font-size: 1.5em;">Date Of Birth:</div>
+<div class="col-md-6">
+<input type="date" name="dob" style="border-bottom: 3px solid #0097c1;" required>
 </div>
 </div>
 
 <div class="row">
 <div class="col-md-4"></div>
-<div class="col-md-4 text-center"><input type="submit" name="sub" id="submitbtn" value="Login"></div>
+<div class="col-md-4 text-center"><input type="submit" name="sub" id="submitbtn" value="Add"></div>
 <div class="col-md-4"></div>
 </div>
 
