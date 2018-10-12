@@ -51,9 +51,10 @@ margin-top: 20px;
 @media only screen and (max-width: 767px){
 	#logoutbtn{
 		width: 100%;	
-	}
-	 
-		
+	} 
+	.btnsection> button{
+		width: 100%;
+	}	
 }
 </style>
 <?php
