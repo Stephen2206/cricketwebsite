@@ -23,7 +23,7 @@ body{
 }
 
 #main-body{
-	background-color: white;	
+	background-color: #f9f9f9;	
     //position: relative;
     height: 206%;
     width: 75%;
@@ -131,6 +131,10 @@ margin: 0;
 	background-color: black;
 	height: 15%;
 	margin-top: 10%;
+	padding: 0;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
 }
 
 @media only screen and (max-width: 767px){
@@ -162,6 +166,9 @@ margin: 0;
 	}
 	.first-row{
 		height: 200px;
+	}
+	#main-body{
+		height: 160%;
 	}
 }
    
@@ -203,11 +210,14 @@ Team India doctor Vijay Mane to join the team in England for the ongoing
 <img src="../images/teams/mostruns.jpg">
 </div>
 
-<div id="footer">
+<div id="footer" style="color: white;font-family: serif; font-size: 2em;">
 <div class="row">
-<div class="col-md-4"></div>
-<div class="col-md-4" style="color: white; font-family: serif; text-align: center;  margin-top: 2em; font-size: 2em;">About Us | Contact Us</div>
-<div class="col-md-4"></div>
+<div class="col-md-6">About Us</div>
+<div class="col-md-6">Contact Us</div>
+</div>
+<div class="row">
+<div class="col-md-6"></div>
+<div class="col-md-6">Howzatt Cricket(c) All rights reserved</div>
 </div>
 </div>
 
