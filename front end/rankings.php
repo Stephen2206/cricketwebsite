@@ -108,6 +108,8 @@ th, td {
 </style>
 </head>
 <body>
+
+
 <div id="left-banner">
 H<br>O<br>Z<br>A<br>T<br>T
 </div>
@@ -121,18 +123,95 @@ H<br>O<br>Z<br>A<br>T<br>T
 include './navbar.php';
 ?>
 
-<table>
+
+
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "cricket_website");
+	if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+	}
+	$sql = "SELECT * FROM teams
+   ORDER BY won desc; 
+   ";
+
+$res_teams = mysqli_query($conn, $sql);
+$count=1;
+?>
+<table style="width:100%">
+<tr>
 	<th>Rank</th>
 	<th>Country</th>
 	<th>No of wins</th>
-	</table>
+	
 
+</tr>
+<?php
 
+while($row_teams = mysqli_fetch_array($res_teams))
+	{ 	
+			 echo '<tr>';
+        echo "<td><center>";
+            echo "$count";
+        echo "</center></td>";
+        echo "<td><center>";
+           
+		   echo $row_teams['country'];
+ 
+		echo "</center></td>";
+        echo "<td><center>";
+           
+                echo $row_teams['won'];
+            
+        echo "</center></td>";
+      
+    echo '</tr>';
+	$count++;
+	}
+?>
+</table>
+<table style="width:100%">
+<tr>
+	<th>Rank</th>
+	<th>Player name</th>
+	<th>No of runs</th>
+	
+
+</tr>
+<?php
+$sql = "SELECT * FROM players
+   ORDER BY Runs desc; 
+   ";
+
+$res_teams = mysqli_query($conn, $sql);
+$count=1;
+while($row_teams = mysqli_fetch_array($res_teams))
+	{ 	
+			 echo '<tr>';
+        echo "<td><center>";
+            echo "$count";
+        echo "</center></td>";
+        echo "<td><center>";
+           
+		   echo $row_teams['Player name'];
+ 
+		echo "</center></td>";
+        echo "<td><center>";
+           
+                echo $row_teams['Runs'];
+            
+        echo "</center></td>";
+      
+    echo '</tr>';
+	$count++;
+	}
+?>
 </div>
-
+</table>
 <div id="right-banner">
 H<br>O<br>M<br>E<br><br>O<br>F<br><br>C<br>R<br>I<br>C<br>K<br>E<br>T
 </div>
+
 
 </body>
 </html>
