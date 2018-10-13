@@ -157,11 +157,11 @@ while($row_player = mysqli_fetch_array($res_players))
 {
     echo '<tr>';
         echo "<td><center>";
-            echo $row_player['Player name'];
+            echo $row_player['player_name'];
         echo "</center></td>";
         echo "<td><center>";
            
-		   echo $row_player['Runs'];
+		   echo $row_player['runs'];
  
 		echo "</td><center>";
         echo "<td><center>";
@@ -176,7 +176,7 @@ while($row_player = mysqli_fetch_array($res_players))
 		echo "</td><center>";
 		echo "<td><center>";
             
-			echo $row_player['Date of birth'];
+			echo $row_player['dob'];
         
 		echo "</td><center>";
     echo '</tr>';

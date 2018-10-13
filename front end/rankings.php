@@ -193,12 +193,12 @@ while($row_teams = mysqli_fetch_array($res_teams))
         echo "</center></td>";
         echo "<td><center>";
            
-		   echo $row_teams['Player name'];
+		   echo $row_teams['player_name'];
  
 		echo "</center></td>";
         echo "<td><center>";
            
-                echo $row_teams['Runs'];
+                echo $row_teams['runs'];
             
         echo "</center></td>";
       
