@@ -21,6 +21,11 @@ body{
 	//position: fixed;
 }
 
+marquee{
+	direction="down";
+	scrollamount=6;
+}
+
 #main-body{
 	background-color: white;	
     //position: relative;
@@ -70,7 +75,7 @@ margin: 0;
 
 .news{
 	height: 100%;
-	width: 60%;
+	width: 50%;
 	margin-top: 50px;
 	//box-shadow: 3px 3px 5px black, -3px 3px 5px black;
     float: left;
@@ -80,12 +85,13 @@ margin: 0;
 }
 .live-score{
 	float: right;
-	width: 30%;
+	width: 40%;
 	height: 100%;
     //box-shadow: 3px 3px 5px black, -3px 3px 5px black;
     margin-top: 50px;  
     float: right;
 	border: 1px solid black;
+	
 }
 
 .first-row{
@@ -125,8 +131,6 @@ margin: 0;
     float: none;	
 }
 
-
-
 }
 
 </style>
@@ -156,20 +160,22 @@ Team India doctor Vijay Mane to join the team in England for the ongoing
 </div>
 
 <div class="live-score">
-<h4 style=" font-family: serif; text-align: center; font-weight: bold;">Live Score</h4>
+<h4 style=" font-family: serif; text-align: center; font-weight: bold;">Upcoming Matches</h4>
 <?php
 $conn = mysqli_connect("localhost", "root", "", "cricket_website");
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql = "SELECT Team1,Team2 FROM matches";
+	$sql = "SELECT * FROM schedule";
 $result = mysqli_query($conn, $sql);
-
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<font color=blue size='8pt'>  " . $row["Team1"]. " x " . $row["Team2"]. " <br></font>";
-    }
+		
+		
+        echo  "<marquee>"."<font color=red size='3pt'> ".$row["format"]." ".$row["date"]." " . $row["team1"]. " vs " . $row["team2"]."  ".$row["venue"]." <br></font></marquee>.";
+		
+	}
 } else {
     echo "0 results";
 }
