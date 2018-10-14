@@ -112,7 +112,9 @@ th, td {
 <div id="left-banner">
 H<br>O<br>Z<br>A<br>T<br>T
 </div>
-
+<div id="right-banner">
+H<br>O<br>M<br>E<br><br>O<br>F<br><br>C<br>R<br>I<br>C<br>K<br>E<br>T
+</div>
 <div class="container" id="main-body">
 
 <div id="cover-page">
@@ -183,5 +185,6 @@ while($row_player = mysqli_fetch_array($res_players))
 }
 
 ?>
+
 </body>
 </html>

@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="home.php">Home</a></li>
-        <li><a href="Schedule.html">Schedule</a></li>
+        <li><a href="Schedule.php">Schedule</a></li>
 		<li><a href="Stats.php">Statistics</a></li>
         <li><a href="teamstats.php">Team Statistics</a></li>
 		<li><a href="rankings.php">Rankings</a></li>

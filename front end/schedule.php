@@ -1,6 +1,6 @@
 <html>
-	<head>
-	<title>HoWZATT!!-Home Of Cricket</title>
+<head>
+<title>HoWZATT!!-Home Of Cricket</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -10,8 +10,9 @@
 <link rel="stylesheet" type="text/css" href="../css/navbar.css">
 <!--fonts below-->
 <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-	<style>
-	body{
+
+<style>
+body{
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -87,10 +88,14 @@ margin: 0;
 	float: left;
 }
 
-table, th,td  {
+table{
     table-layout:fixed;
 	width: 100%;    
-    background-color: #f1f1c1;
+}
+th {
+    table-layout:fixed;
+	width: 100%;    
+    background-color: #38edc0;
 }th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -99,10 +104,14 @@ th, td {
     padding: 15px;
     text-align: center;
 }
-	</style>
-	</head>
-	<body>
-	<div id="left-banner">
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="left-banner">
 H<br>O<br>Z<br>A<br>T<br>T
 </div>
 <div id="right-banner">
@@ -114,60 +123,81 @@ H<br>O<br>M<br>E<br><br>O<br>F<br><br>C<br>R<br>I<br>C<br>K<br>E<br>T
 <img src="../images/teams/rcb.jpg" id="cover-image">
 </div>
 
+
 <?php
 include './navbar.php';
 ?>
-	<?php
-	
-	$conn = mysqli_connect("localhost", "root", "", "cricket_website");
+
+
+
+<?php
+
+$conn = mysqli_connect("localhost", "root", "", "cricket_website");
 	if ($conn->connect_error) {
 	die("Connection failed: " . $conn->connect_error);
 	}
-	$sql = "SELECT * FROM teams";
-	$res_teams = $conn -> query($sql);
-	?>
-	<table style="width:100%">
-	  <tr>
-		<th>Team ID</th>
-		<th>Country</th> 
-		<th>Matches Played</th>
-		<th>Matches Won</th>
-		<th>Matches Lost(Derived)</th>
-	 </tr>
-	 <?php
-	while($row_teams = mysqli_fetch_array($res_teams))
-	{
-		echo '<tr>';
-			echo "<td><center>";
-				echo $row_teams['team_id'];
-			echo "</center></td>";
-			echo "<td><center>";
-			   
-			   echo $row_teams['country'];
-	 
-			echo "</td><center>";
-			echo "<td><center>";
-			   
-					echo $row_teams['matches_played'];
-				
-			echo "</td><center>";
-			echo "<td><center>";
-				
-				echo $row_teams['won'];
-			
-			echo "</td><center>";
-			echo "<td><center>";
-				
-				echo $row_teams['matches_played']-$row_teams['won'];
-			
-			echo "</td><center>";
-		echo '</tr>';
+	$sql = "SELECT * FROM schedule; 
+   ";
+
+$res_schedule = mysqli_query($conn, $sql);
+
+?>
+<h1>SCHEDULE</h1>
+<table style="width:100%">
+<tr>
+	<th>Date</th>
+	<th>Team1</th>
+	<th>Team2</th>
+	<th>Time</th>
+	<th>Venue</th>
+	<th>Format</th>
+</tr>
+<?php
+while($row_schedule = mysqli_fetch_array($res_schedule))
+	{ 	
+			 echo '<tr>';
+        echo "<td><center>";
+        echo $row_schedule['date'];
+        echo "</center></td>";
+		
+        
+        echo "<td><center>";
+        echo $row_schedule['team1'];
+        echo "</center></td>";
+        
+		
+		
+        echo "<td><center>";
+            echo $row_schedule['team2'];
+        echo "</center></td>";
+        
+		
+		
+        echo "<td><center>";
+            echo $row_schedule['start_time'];
+        echo "</center></td>";
+        
+		
+		
+        echo "<td><center>";
+            echo $row_schedule['venue'];
+        echo "</center></td>";
+        
+		
+		
+        echo "<td><center>";
+            echo $row_schedule['format'];
+        echo "</center></td>";
+        
+		
+      
+    echo '</tr>';
 	}
 ?>
-
-	</body>  
-	  
+</table>
 
 
 
+
+</body>
 </html>
