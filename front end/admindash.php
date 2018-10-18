@@ -51,8 +51,7 @@ margin-top: 20px;
 	#logoutbtn{
 		width: 100%;	
 	}
-	 
-		
+	
 }
 </style>
 <?php
@@ -80,9 +79,9 @@ else{
 <div class="col-md-4"><div class="btnsection"><button onclick=window.open("newmatch.php")>Add Match</button></div></div>
 </div>
 <div class="row">
-<div class="col-md-6"><div class="btnsection"><button onclick=window.open("newbatsman.php")>Add Batsman</button></div></div>
-<div class="col-md-6"><div class="btnsection"><button onclick=window.open("newbowler.php")>Add Bowler</button></div></div>
-<!--<div class="col-md-4"><div class="btnsection"><button>Add Player</button></div></div>-->
+<div class="col-md-4"><div class="btnsection"><button onclick=window.open("newbatsman.php")>Add Batsman</button></div></div>
+<div class="col-md-4"><div class="btnsection"><button onclick=window.open("newbowler.php")>Add Bowler</button></div></div>
+<div class="col-md-4"><div class="btnsection"><button onclick=window.open("newbowler.php")>Start Match</button></div></div>
 </div>
 
 
