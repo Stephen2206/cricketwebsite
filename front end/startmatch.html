@@ -1,0 +1,37 @@
+<html>
+Choose 1st team:
+<select name="team1">
+	<?php
+	$q="SELECT * from teams";
+	$tid=mysqli_query($conn,$q);
+	while($row=mysqli_fetch_array($tid))
+	{	
+	?>
+	<option>
+	<?php
+	echo $row["country"];
+	?>
+	</option>
+	<?php 
+	}
+	?>
+</select>
+
+Choose 2nd team:
+<select name="team1">
+	<?php
+	$q="SELECT * from teams";
+	$tid=mysqli_query($conn,$q);
+	while($row=mysqli_fetch_array($tid))
+	{	
+	?>
+	<option>
+	<?php
+	echo $row["country"];
+	?>
+	</option>
+	<?php 
+	}
+	?>
+</select>
+</html>

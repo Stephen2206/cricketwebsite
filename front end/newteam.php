@@ -72,8 +72,8 @@ die("Connection failed" . $conn->connect_error);
 
 ?>
 <div class="container" id="section1">
-<form method="post" >
-<center><h2 style="margin-top:20px;">Add New Player</h2></center>
+<form action="insertteam.php" method="post" >
+<center><h2 style="margin-top:20px;">Add New Team</h2></center>
 
 <div class="row" style="margin-top: 20px;">
 <div class="col-md-6 text-center" style="font-size: 1.5em;;">Team_ID</div>

@@ -81,7 +81,7 @@ else{
 <div class="row">
 <div class="col-md-4"><div class="btnsection"><button onclick=window.open("newbatsman.php")>Add Batsman</button></div></div>
 <div class="col-md-4"><div class="btnsection"><button onclick=window.open("newbowler.php")>Add Bowler</button></div></div>
-<div class="col-md-4"><div class="btnsection"><button onclick=window.open("newbowler.php")>Start Match</button></div></div>
+<div class="col-md-4"><div class="btnsection"><button onclick=window.open("startmatch.php")>Start Match</button></div></div>
 </div>
 
 
