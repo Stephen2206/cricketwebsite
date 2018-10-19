@@ -5,7 +5,7 @@ $conn=mysqli_connect("localhost","root","","cricket_website");
 $t1=$_POST['team1'];
 $t2=$_POST['team2'];
 ?>
-<form action="score.php" method="post">
+<form action="match.php" method="post">
 Batting First:
 <select name="bat">
 <option>

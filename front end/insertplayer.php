@@ -11,9 +11,16 @@ die("Connection failed" . $conn->connect_error);
 	$debut=$_POST['debut'];
 	$wickets=$_POST['wickets'];
 	$dob=$_POST['dob'];
-	echo $pname."Added" ;
-	$query="INSERT INTO `players` (`player_id`, `team_id`, `player_name`, `runs`, `debut`, `wickets`, `dob`) VALUES 
-	('$pid','$teamid', '$pname', '$runs', '$debut', '$wickets', '$dob')";
+	echo $pname." Added" ;
+	
+	$q="SELECT * from teams WHERE team_id='$teamid'";
+	$tid=mysqli_query($conn,$q);
+	$row=mysqli_fetch_array($tid);
+	$count=$row['country'];
+	echo "".$count;
+	
+	$query="INSERT INTO `players` (`player_id`, `fk_team_id`, `player_name`, `runs`, `debut`, `wickets`, `dob`,`country`) VALUES 
+	('$pid','$teamid', '$pname', '$runs', '$debut', '$wickets', '$dob','$count')";
 	mysqli_query($conn,$query);
 ?>
 <html>
