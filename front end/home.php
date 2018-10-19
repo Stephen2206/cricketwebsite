@@ -25,7 +25,7 @@ body{
 #main-body{
 	background-color: #f9f9f9;	
     //position: relative;
-    height: 206%;
+    //height: 206%;
     width: 75%;
 	float: left;
 	padding: 0;
@@ -56,11 +56,6 @@ height: 300px;
 width: 100%;
 padding: 0;
 margin: 0;
-//background:url('../images/teams/rcb.jpg'); 	
-//background-size: 100%, 100%;
-//backgorund-repeat: no-repeat;
-//box-shadow: 0 3px 3px black;
-//display: block;
 }
 
 #cover-image{
@@ -129,7 +124,7 @@ margin: 0;
 #footer{
 	width: 100%;
 	background-color: black;
-	height: 15%;
+	height: 30%;
 	margin-top: 10%;
 	padding: 0;
 	margin-left: 0;
@@ -140,14 +135,18 @@ margin: 0;
 @media only screen and (max-width: 767px){
 	.second-row{
 	    height: 200px;
-        margin-top: 360px;		
+        margin-top: 360px;
+        		
 	}
 	.second-row> img{
 		height: 100%;
 		width: 100%;
+		
 	}
 	#main-body{
 		width: 100%;
+		margin-right:0;
+		
 	}
 	#right-banner{
 		display: none;
@@ -156,7 +155,7 @@ margin: 0;
 		display: none;
 	}
 	#cover-page{
-		height: 15%;
+		height: 25%;
 	}
 	.news{
 		width: 100%;
@@ -167,11 +166,11 @@ margin: 0;
 	.first-row{
 		height: 200px;
 	}
-	#main-body{
-		height: 160%;
-	}
+	#newspara{
+	    font-size: 10px;
+	}	
 }
-   
+ 
 		
 }
 </style>
@@ -194,8 +193,8 @@ include './navbar.php';
 <div class="wrap">
 <img src="../images/news/rahane.jpg" width="100%" height="100%">
 </div>
-<h4>Ajinkya Rahane will join Team Inida</h4>
-<p>Team India Vice Captain Akinkya Rahane was given the go ahead by
+<b>Ajinkya Rahane will join Team Inida</b>
+<p id="newspara">Team India Vice Captain Akinkya Rahane was given the go ahead by
 Team India doctor Vijay Mane to join the team in England for the ongoing
 5 day test match series. Rahane was India's leading run getter last year in England.</p>
 </div>
@@ -210,14 +209,11 @@ Team India doctor Vijay Mane to join the team in England for the ongoing
 <img src="../images/teams/mostruns.jpg">
 </div>
 
-<div id="footer" style="color: white;font-family: serif; font-size: 2em;">
-<div class="row">
-<div class="col-md-6">About Us</div>
-<div class="col-md-6">Contact Us</div>
-</div>
-<div class="row">
+<div id="footer" style="color: white; font-family: serif;">
+<div id="logoname" style="font-family: 'Bangers', cursive; width: 100%; text-align: center; font-size: 3em; padding-top: 1em;">Howzatt</div>
+<div class="row" style="margin-top: 4em;">
 <div class="col-md-6"></div>
-<div class="col-md-6">Howzatt Cricket(c) All rights reserved</div>
+<div class="col-md-6" style="text-align:right;">Howzatt Cricket(c) All rights reserved</div>
 </div>
 </div>
 

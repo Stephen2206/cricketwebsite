@@ -72,7 +72,7 @@ unset($_SESSION['user']);
 <center><h2 style="margin-top:20px;">ADMIN</h2></center>
 <form method="post" action="adminvolfill.php">
 <div class="row" style="margin-top: 20px;">
-<div class="col-md-6 text-center" style="font-size: 1.5em;;">Volunteer Name:</div>
+<div class="col-md-6 text-center" style="font-size: 1.5em;">Volunteer Name:</div>
 <div class="col-md-6">
 <input type="text" name="volname" style="border-bottom: 3px solid #0097c1;">
 </div>

@@ -7,7 +7,7 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="News.html">News</a></li>
+        <li><a href="news.php">News</a></li>
         <li><a href="Schedule.html">Schedule</a></li>
 		<li><a href="Stats.php">Statistics</a></li>
         <li><a href="teams.php">Teams</a></li>
